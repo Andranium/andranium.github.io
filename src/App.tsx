@@ -8,7 +8,13 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Текст писать тут
+          Здравствуйте, меня зовут Андраник :) можно Андро, так будет легче ))
+
+          - Хочу обучаться Реакту
+          - React.js
+          - Vue, Nuxt, Jquery
+
+          Мне 24, работаю в компани Иннотех, разрабатывает проект для Росгидромета.
         </p>
       </header>
     </div>
