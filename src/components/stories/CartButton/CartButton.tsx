@@ -6,7 +6,7 @@ type TCartButton = {
   disabled?: boolean;
 }
 
-export default function CartButton({ count = 0, disabled = false, ...rest }: TCartButton) {
+export default function CartButton({ count = 0, disabled = false }: TCartButton) {
   const cartButtonTemplate = count <= 0 ?
     <button className={`${styles.cart__button} ${ disabled && styles.cart__button_disabled }`}>
       В Корзину
