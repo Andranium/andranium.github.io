@@ -1,0 +1,60 @@
+.modal {
+  border: none;
+  border-radius: 8px;
+  width: 375px;
+
+  &::backdrop {
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0,0,0, 0.5);
+  }
+
+  &[open] {
+    &::backdrop {
+      animation: fade 0.2s ease forwards;
+    }
+  }
+
+  &--dark {
+    background: black;
+    color: white;
+
+    .modalBtn {
+      color: #1ea7fd;
+    }
+  }
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  border-top: 1px solid lightgray;
+}
+
+.modalBtn {
+  border: none;
+  background: none;
+  color: teal;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 600;
+  outline: none;
+}
+
+.modalTitle, .modalContent {
+  margin: 0 0 16px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
