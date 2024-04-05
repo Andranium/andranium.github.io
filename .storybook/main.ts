@@ -20,7 +20,6 @@ const config = {
   docs: {
     autodocs: 'tag',
   },
-  staticDirs: ['../public'],
   webpackFinal: async (config: webpack.Configuration, { configType }: any) => {
     const paths = {
       src: path.resolve(__dirname, '..', 'src'),
