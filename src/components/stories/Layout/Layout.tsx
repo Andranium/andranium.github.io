@@ -12,7 +12,7 @@ export default function Layout() {
       <ProductCardCart
         src="https://egoisme.ru/wa-data/public/shop/products/56/24/22456/images/24066/24066.55x0.jpg"
         title="Chopard vetiver d'haiti au the vert"
-        description="Мы вынуждены отталкиваться от того, что выбранный нами инновационный путь является качественно новой ступенью новых принципов формирования..."
+        description="Мы вынуждены отталкиваться от того, что выбранный нами инновационный путь..."
       />
     </main>
   );
