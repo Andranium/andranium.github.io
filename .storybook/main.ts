@@ -1,19 +1,21 @@
 import webpack from 'webpack';
 import path from 'path';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const config = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    // '@storybook/preset-scss',
-    // '@storybook/addon-mdx-gfm',
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
+    /*"@storybook/preset-scss",*/
+    "@storybook/addon-mdx-gfm"
+
   ],
   framework: {
     name: '@storybook/react-webpack5',
-    options: {},
+    options: { svgrOptions: {
+        icon: true
+      }},
   },
   docs: {
     autodocs: 'tag',
@@ -38,8 +40,6 @@ const config = {
       };
     }
 
-    config.plugins?.push(new MiniCssExtractPlugin());
-
     if (config.module?.rules) {
       const imageRule = config.module?.rules?.find((rule) => {
         const test = (rule as { test: RegExp }).test;
@@ -58,40 +58,25 @@ const config = {
           test: /\.(sc|sa|c)ss$/i,
           use: [
             {
-              loader: isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+              loader: 'style-loader',
             },
             {
               loader: 'css-loader',
               options: {
                 modules: {
                   auto: /.module./,
-                  localIdentName: isDev
-                    ? '[path][name]__[local]--[hash:base64:5]'
-                    : '[hash:base64:8]',
+                  localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
                 },
               },
             },
             'postcss-loader',
             {
               loader: 'sass-loader',
-              options: {
-                additionalData: '@import "src/shared/styles/common.scss";',
-              },
             },
           ],
         },
         {
-          test: /\.svg$/i,
-          type: 'asset/resource',
-          resourceQuery: /url/, // *.svg?url
-          generator: {
-            filename: 'img/[name][ext]',
-          },
-        },
-        {
-          test: /\.svg$/i,
-          issuer: /\.[jt]sx?$/,
-          resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
+          test: /\.svg$/,
           use: ['@svgr/webpack'],
         }
       );
