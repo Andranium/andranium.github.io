@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './Layout.module.scss';
-import Header from 'src/components/stories/Header/Header';
-import Operation from 'src/components/stories/Operation/Operation';
-import ProductCardCart from 'src/components/stories/ProductCardCart/ProductCardCart';
+import Header from '../Header/Header.tsx';
+import ProductCardCart from '../ProductCardCart/ProductCardCart.tsx';
 
 export default function Layout() {
   return (
