@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Operation.module.scss';
-import CartButton from '../CartButton/CartButton.tsx';
+import CartButton from '../CartButton/CartButton';
 
 type TOperation = {
   title: string;

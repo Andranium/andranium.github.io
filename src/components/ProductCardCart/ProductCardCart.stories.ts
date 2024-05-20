@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react';
 
-import ProductCard from './ProductCardCart.tsx';
+import ProductCard from './ProductCardCart';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta<typeof ProductCard> = {

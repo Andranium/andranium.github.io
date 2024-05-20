@@ -1,18 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import Modal from 'src/components/Modal/Modal';
 import './App.css';
+import Header from 'src/components/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Здравствуйте, меня зовут Андраник :) можно Андро, так будет легче )) - Хочу обучаться Реакту - React.js - Vue,
-          Nuxt, Jquery Мне 24, работаю в компани Иннотех, разрабатывает проект для Росгидромета
-        </p>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Modal shown />
+    </>
   );
 }
 
