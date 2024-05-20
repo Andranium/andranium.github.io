@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, ReactNode } from 'react';
 import styles from './Modal.module.scss';
 
 export default function Modal({
@@ -8,9 +8,13 @@ export default function Modal({
 }: {
   shown?: boolean;
   darkMode?: boolean;
-  children?: unknown;
+  children?: ReactNode;
 }) {
   const modal = useRef(null);
+
+  const defaultText = `Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый
+          кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их
+          труду ежегодно сотни питомцев находят свой новый дом.`;
 
   function showModal() {
     modal.current.showModal();
@@ -30,11 +34,7 @@ export default function Modal({
         <h2 className={styles.modalTitle}>Привет !</h2>
 
         <p className={styles.modalContent}>
-          Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый
-          кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их
-          труду ежегодно сотни питомцев находят свой новый дом.
-
-          {children}
+          {children || defaultText}
         </p>
 
         <div className={styles.modalFooter}>

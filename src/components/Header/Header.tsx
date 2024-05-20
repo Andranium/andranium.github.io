@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import Logo from '../Logo/Logo.tsx';
+import Logo from '../Logo/Logo';
 
 export default function Header() {
   return (

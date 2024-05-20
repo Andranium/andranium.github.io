@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ProductCard.module.scss';
-import CartButton from '../CartButton/CartButton.tsx';
+import CartButton from '../CartButton/CartButton';
 
 type TProps = {
   title: string;
