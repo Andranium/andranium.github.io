@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react';
 import Modal from 'src/components/Modal/Modal';
-import './App.css';
 import Header from 'src/components/Header/Header';
+import styles from './App.scss';
 
 export const ThemeContext = createContext(null);
 
@@ -17,8 +17,10 @@ function App() {
 
   return (
     <ThemeContext.Provider value={providerData}>
-      <Header />
-      <Modal shown />
+      <main className={styles[`theme-${providerData.state}`]}>
+        <Header />
+        <Modal />
+      </main>
     </ThemeContext.Provider>
   );
 }
