@@ -7,7 +7,7 @@ export default function ModalButton() {
 
   return (
     <>
-      <input placeholder="Текст модалки" value={text} onInput={e => setText(e.target.value)} />
+      <input placeholder="Текст модалки" value={text} onInput={(e: any) => setText(e.target.value)} />
 
       <button onClick={() => { setModal(state => !state) }}>toggle modal</button>
 
