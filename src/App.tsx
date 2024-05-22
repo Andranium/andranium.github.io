@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
-import Modal from 'src/components/Modal/Modal';
-import Header from 'src/components/Header/Header';
+import Modal from './components/Modal/Modal';
+import Header from './components/Header/Header';
 import styles from './App.scss';
 
 export const ThemeContext = createContext(null);
