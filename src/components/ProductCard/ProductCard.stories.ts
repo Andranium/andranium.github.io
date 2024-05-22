@@ -12,7 +12,5 @@ const meta: Meta<typeof ProductCard> = {
 export default meta;
 
 export const ProductCardConfig = {
-  args: {
-
-  }
-}
+  args: {},
+};

@@ -2,30 +2,28 @@ import React, { createContext, useState } from 'react';
 import Modal from './components/Modal/Modal';
 import Header from './components/Header/Header';
 import styles from './App.scss';
-import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
+import { use } from 'i18next';
+import { useTranslation, initReactI18next } from 'react-i18next';
 import ruLang from '../lang/ru.json';
 import enLang from '../lang/en.json';
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources: {
-      en: {
-        translation: enLang,
-      },
-
-      ru: {
-        translation: ruLang
-      }
+use(initReactI18next).init({
+  resources: {
+    en: {
+      translation: enLang,
     },
-    lng: "ru",
-    fallbackLng: "ru",
 
-    interpolation: {
-      escapeValue: false
-    }
-  } as any);
+    ru: {
+      translation: ruLang,
+    },
+  },
+  lng: 'ru',
+  fallbackLng: 'ru',
+
+  interpolation: {
+    escapeValue: false,
+  },
+} as undefined);
 
 export const ThemeContext = createContext(null);
 
@@ -37,14 +35,12 @@ function App() {
     state: theme,
     lang: 'ru',
     changeLang(lang: string) {
-      console.log(lang);
-
       i18n.changeLanguage(lang);
     },
     changeTheme(value: string) {
-      setTheme(value)
-    }
-  }
+      setTheme(value);
+    },
+  };
 
   return (
     <ThemeContext.Provider value={providerData}>

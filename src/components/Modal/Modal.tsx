@@ -33,9 +33,7 @@ export default function Modal({
       <dialog ref={modal} className={`${styles.modal} ${darkMode && styles['modal--dark']}`}>
         <h2 className={styles.modalTitle}>Привет !</h2>
 
-        <p className={styles.modalContent}>
-          {children || defaultText}
-        </p>
+        <p className={styles.modalContent}>{children || defaultText}</p>
 
         <div className={styles.modalFooter}>
           <button className={styles.modalBtn} onClick={closeModal}>

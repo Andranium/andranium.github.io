@@ -12,7 +12,5 @@ const meta: Meta<typeof Layout> = {
 export default meta;
 
 export const LayoutConfig = {
-  args: {
-
-  }
-}
+  args: {},
+};

@@ -12,6 +12,5 @@ const meta: Meta<typeof Logo> = {
 export default meta;
 
 export const LogoConfig = {
-  args: {
-  }
-}
+  args: {},
+};
