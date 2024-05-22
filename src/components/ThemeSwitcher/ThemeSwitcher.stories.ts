@@ -12,6 +12,5 @@ const meta: Meta<typeof ThemeSwitcher> = {
 export default meta;
 
 export const Count = {
-  args: {
-  }
-}
+  args: {},
+};

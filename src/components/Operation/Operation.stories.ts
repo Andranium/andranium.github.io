@@ -12,6 +12,5 @@ const meta: Meta<typeof Operation> = {
 export default meta;
 
 export const OperationConfig = {
-  args: {
-  }
-}
+  args: {},
+};

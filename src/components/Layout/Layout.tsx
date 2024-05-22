@@ -6,8 +6,6 @@ export default function Layout() {
   return (
     <main className={styles.layout}>
       <Header />
-
-
     </main>
   );
 }

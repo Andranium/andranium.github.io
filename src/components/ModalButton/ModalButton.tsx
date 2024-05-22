@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import Modal from '../Modal/Modal';
 
 export default function ModalButton() {
@@ -7,13 +7,21 @@ export default function ModalButton() {
 
   return (
     <>
-      <input placeholder="Текст модалки" value={text} onInput={(e: any) => setText(e.target.value)} />
+      <input
+        placeholder="Текст модалки"
+        value={text}
+        onInput={(e: FormEvent<HTMLInputElement>) => setText((e.target as HTMLInputElement).value)}
+      />
 
-      <button onClick={() => { setModal(state => !state) }}>toggle modal</button>
+      <button
+        onClick={() => {
+          setModal((state) => !state);
+        }}
+      >
+        toggle modal
+      </button>
 
-      <Modal shown={modal}>
-        {text}
-      </Modal>
+      <Modal shown={modal}>{text}</Modal>
     </>
-  )
+  );
 }

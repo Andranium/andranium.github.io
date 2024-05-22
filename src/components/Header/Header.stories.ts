@@ -12,6 +12,5 @@ const meta: Meta<typeof Header> = {
 export default meta;
 
 export const HeaderConfig = {
-  args: {
-  }
-}
+  args: {},
+};

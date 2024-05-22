@@ -12,6 +12,5 @@ const meta: Meta<typeof CartButton> = {
 export default meta;
 
 export const Count = {
-  args: {
-  }
-}
+  args: {},
+};

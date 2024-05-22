@@ -8,25 +8,14 @@ export default function ThemeSwitcher() {
   function changeTheme() {
     const value = theme.state === 'light' ? 'dark' : 'light';
 
-    theme.changeTheme(value)
+    theme.changeTheme(value);
   }
 
   return (
     <div className={styles.themeSwitcher}>
-      <input
-        className={styles.themeSwitcher_input}
-        onChange={changeTheme}
-        type="checkbox"
-        hidden
-        id="switcher-id"
-      />
+      <input className={styles.themeSwitcher_input} onChange={changeTheme} type="checkbox" hidden id="switcher-id" />
 
-      <label
-        htmlFor="switcher-id"
-        className={styles.themeSwitcher_box}
-      >
-
-      </label>
+      <label htmlFor="switcher-id" className={styles.themeSwitcher_box}></label>
     </div>
-  )
+  );
 }

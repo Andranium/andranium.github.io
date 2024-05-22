@@ -12,6 +12,5 @@ const meta: Meta<typeof Modal> = {
 export default meta;
 
 export const ModalConfig = {
-  args: {
-  }
-}
+  args: {},
+};
