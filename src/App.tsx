@@ -1,11 +1,11 @@
 import React, { createContext, useState } from 'react';
-import Modal from './components/Modal/Modal';
 import Header from './components/Header/Header';
 import styles from './App.scss';
 import { use } from 'i18next';
 import { useTranslation, initReactI18next } from 'react-i18next';
 import ruLang from '../lang/ru.json';
 import enLang from '../lang/en.json';
+import ModalButton from './components/ModalButton/ModalButton';
 
 use(initReactI18next).init({
   resources: {
@@ -46,9 +46,10 @@ function App() {
     <ThemeContext.Provider value={providerData}>
       <main className={styles[`theme-${providerData.state}`]}>
         <Header />
-        <Modal />
 
         {t('my-app')}
+
+        <ModalButton />
       </main>
     </ThemeContext.Provider>
   );
