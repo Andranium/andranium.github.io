@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, LegacyRef } from 'react';
 import styles from './ProductCard.module.scss';
 import CartButton from '../CartButton/CartButton';
 
@@ -6,15 +6,11 @@ type TProps = {
   title: string;
   url: string;
   description: string;
-  ref: any
 };
 
-function ProductCard({ title, url, description }: TProps, ref: any) {
+function ProductCard({ title, url, description }: TProps, ref: LegacyRef<HTMLDivElement>) {
   return (
-    <div
-      ref={ref}
-      className={styles.product_card}
-    >
+    <div ref={ref} className={styles.product_card}>
       <h3 className={styles.product_card__title}>{title}</h3>
 
       <img className={styles.product_card__image} src={url} alt={title} />
