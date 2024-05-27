@@ -53,13 +53,6 @@ const PRODUCTS_MOCK = [
   },
 ];
 
-type Product = {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-}
-
 export default function Products() {
   const [products, setProducts] = useState(PRODUCTS_MOCK);
   const target = useRef();
@@ -89,10 +82,8 @@ export default function Products() {
   const observer = useObserver(observerCallback);
 
   useEffect(() => {
-    if (!target?.current) return;
-
     observer.observe(target.current);
-  }, []);
+  });
 
   return (
     <div className={styles.productsGrid}>
