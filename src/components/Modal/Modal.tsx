@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, ReactNode } from 'react';
+import ReactDom from 'react-dom';
 import styles from './Modal.module.scss';
 
 export default function Modal({
@@ -28,7 +29,7 @@ export default function Modal({
     if (shown) showModal();
   }, [shown]);
 
-  return (
+  return ReactDom.createPortal(
     <>
       <dialog ref={modal} className={`${styles.modal} ${darkMode && styles['modal--dark']}`}>
         <h2 className={styles.modalTitle}>Привет !</h2>
@@ -41,6 +42,8 @@ export default function Modal({
           </button>
         </div>
       </dialog>
-    </>
+    </>,
+
+    document.body
   );
 }
