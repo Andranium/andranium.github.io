@@ -6,7 +6,7 @@ import { useTranslation, initReactI18next } from 'react-i18next';
 import ruLang from '../lang/ru.json';
 import enLang from '../lang/en.json';
 import ModalButton from './components/ModalButton/ModalButton';
-import Products from 'src/components/Products/Products';
+import Products from './components/Products/Products';
 
 use(initReactI18next).init({
   resources: {
