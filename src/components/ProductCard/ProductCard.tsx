@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './ProductCard.module.scss';
 import CartButton from '../CartButton/CartButton';
 
@@ -6,11 +6,15 @@ type TProps = {
   title: string;
   url: string;
   description: string;
+  ref: any
 };
 
-export default function ProductCard({ title, url, description }: TProps) {
+function ProductCard({ title, url, description }: TProps, ref: any) {
   return (
-    <div className={styles.product_card}>
+    <div
+      ref={ref}
+      className={styles.product_card}
+    >
       <h3 className={styles.product_card__title}>{title}</h3>
 
       <img className={styles.product_card__image} src={url} alt={title} />
@@ -23,3 +27,5 @@ export default function ProductCard({ title, url, description }: TProps) {
     </div>
   );
 }
+
+export default forwardRef(ProductCard);
