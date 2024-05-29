@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import styles from './SliderRange.module.scss';
 
 export default function SliderRange() {
   const [slider, setSlider] = useState(0);
 
-  function setSlideValue(e: any) {
-    setSlider(e.target.value);
+  function setSlideValue(e: ChangeEvent<HTMLInputElement>) {
+    setSlider(+e.target.value);
   }
 
   return (
