@@ -1,0 +1,10 @@
+.sliderRange {
+  margin: 16px;
+  display: flex;
+  align-items: center;
+
+  &_label {
+    margin-left: 16px;
+    font-weight: bold;
+  }
+}
