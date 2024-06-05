@@ -1,0 +1,24 @@
+.addProduct {
+  display: inline-flex;
+  flex-direction: column;
+
+  &_label {
+    margin-bottom: 12px;
+  }
+
+  &_fieldWrapper {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &_error {
+    color: red;
+    margin: 8px 0;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+}

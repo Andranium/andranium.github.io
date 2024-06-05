@@ -1,0 +1,31 @@
+.signIn {
+  padding: 32px;
+  display: inline-flex;
+  flex-direction: column;
+
+  &_fieldWrapper {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &_label {
+    margin-bottom: 12px;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+
+  &_input {
+    &Error {
+      border-color: red;
+    }
+  }
+
+  &_error {
+    color: red;
+    margin: 8px 0;
+  }
+}

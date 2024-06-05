@@ -50,9 +50,9 @@ function App() {
 
         {t('my-app')}
 
-        <ModalButton />
+        {/*<ModalButton />*/}
 
-        <Products />
+        {/*<Products />*/}
       </main>
     </ThemeContext.Provider>
   );
